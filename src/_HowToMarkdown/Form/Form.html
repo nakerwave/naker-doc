@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+body {
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  body > #content {
+    padding: 0px 20px 20px 20px !important;
+  }
+}
+
+body > #content {
+  margin: 0px;
+  max-width: 900px;
+  border: 1px solid #e1e4e8;
+  padding: 10px 40px;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+  flex: 0 1 auto;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #0366d6;
+  text-decoration: none; }
+  a:visited {
+    color: #0366d6; }
+  a:hover {
+    color: #0366d6;
+    text-decoration: underline; }
+
+pre {
+  background-color: #EEE;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+/**
+  * Code blocks
+  */
+
+code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  word-wrap: break-word;
+  padding: .2em .4em;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+pre > code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+  font-size: 100%;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  border-left-width: 3px;
+  padding: 0 1em;
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+blockquote * {
+  font-style: normal !important;
+  letter-spacing: 0;
+  color: #6a737d !important;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-spacing: 2px;
+  display: block;
+  font-size: 14px;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/**
+ * Others
+ */
+
+img {
+  max-width: 100%;
+    margin-top: 20px;
+}
+
+p {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #24292e; }
+
+ul {
+  margin-top: 0; }
+
+li {
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; }
+
+li + li {
+  margin-top: 0.25em; }
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a:visited {
+  color: #0366d6; }
+
+h1, h2, h3 {
+  border-bottom: 1px solid #eaecef;
+  color: #111;
+  /* Darker */ }
+
+        /* Add transition to containers so they can push in and out. */
+        #layout,
+        #menu,
+        .menu-link {
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -ms-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+        }
+
+        /* This is the parent `<div>` that contains the menu and the content area. */
+        #layout {
+            position: relative;
+            padding-left: 0;
+        }
+
+        #layout.active #menu {
+            left: 250px;
+            width: 250px;
+        }
+
+        #layout.active .menu-link {
+            left: 250px;
+        }
+
+        /* The content `<div>` is where all your content goes. */
+        .content {
+            margin: 50px auto;
+            padding: 0 2em;
+            max-width: 80ex;
+            line-height: 1.6em;
+        }
+
+        /*
+      The `#menu` `<div>` is the parent `<div>` that contains the menu that
+      appears on the left side of the page.
+      */
+        #menu {
+            margin-left: -250px;
+            /* "#menu" width */
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            /* so the menu or its navicon stays above all content */
+            background: #404050;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            font-size: 0.9em;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #F0F0FB !important;
+        }
+
+        /* All anchors inside the menu should be styled like this. */
+        #menu a {
+            display: block;
+            padding: 0.5em 0.5em;
+        }
+
+        #menu a:first-letter {
+            text-transform: capitalize;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 1em 0.5em;
+        }
+
+        #menu ul ul {
+            margin-top: 0.5em;
+            margin-left: 4em;
+            border-left: 2px #2F2F3E solid;
+        }
+
+        /* Change color of the anchor links on hover/focus. */
+        #menu li a:hover,
+        #menu li a:focus {
+            background: #2F2F70;
+        }
+
+        /* This styles the selected menu item `<li>`. */
+        #menu li a.active {
+            background: #2F2F70;
+        }
+
+        /* This styles a link within a selected menu item `<li>`. */
+        #menu li a.active {
+            color: #F0F0FB;
+        }
+
+        /* This styles the menu heading. */
+        #menu li.heading {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            height: 0px;
+            color: #F0F0FB;
+        }
+
+        #menu li.heading>* {
+            padding: 0.5em;
+            display: block;
+        }
+
+        #menu li.heading a {
+            color: #F0F0FB;
+        }
+
+        /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+        /*
+      `.menu-link` represents the responsive menu toggle that shows/hides on
+      small screens.
+      */
+        .menu-link {
+            position: fixed;
+            display: block;
+            /* show this only on small screens */
+            top: 0;
+            left: 0;
+            /* "#menu width" */
+            font-size: 10px;
+            /* change this value to increase/decrease button size */
+            z-index: 10;
+            width: 2em;
+            height: auto;
+            padding: 1.6em 1.2em;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .menu-link:hover {
+            background: #F0F0FB;
+        }
+
+        .menu-link span {
+            position: relative;
+            display: block;
+            color: #F0F0FB !important;
+        }
+
+        .menu-link span,
+        .menu-link span:before,
+        .menu-link span:after {
+            background-color: #2F2F3E;
+            width: 100%;
+            height: 0.2em;
+            border-radius: 1em;
+        }
+
+        .menu-link span:before,
+        .menu-link span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .menu-link span:after {
+            margin-top: 0.6em;
+        }
+
+        /* Hides the menu at `48em`, but modify this based on your app's needs. */
+        @media (min-width: 48em) {
+
+            .header,
+            .content {
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+
+            #layout {
+                padding-left: 250px;
+                /* left col width "#menu" */
+                left: 0;
+            }
+
+            #menu {
+                left: 250px;
+            }
+
+            .menu-link {
+                position: fixed;
+                left: 250px;
+                display: none;
+            }
+
+            #layout.active .menu-link {
+                left: 250px;
+            }
+        }
+
+        @media (max-width: 48em) {
+
+            /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left:
+         * Make the window small.
+         * Tap the menu to trigger the active state.
+         * Make the window large again.
+         */
+            #layout.active {
+                position: relative;
+                left: 250px;
+            }
+        }
+
+        /* Heading anchors and permalinks */
+        h1[id],
+        h2[id],
+        h3[id],
+        h4[id],
+        h5[id],
+        h6[id] {
+            position: relative;
+        }
+
+        .heading-anchor-permalink {
+            /* Position the permalink to the left of the title */
+            position: absolute;
+            right: 100%;
+            /* Add some spacing as padding to not lose the hover */
+            padding-right: 0.6rem;
+            /* Make it only visible on heading hover, see below */
+            opacity: 0;
+        }
+
+        h1[id]:hover .heading-anchor-permalink,
+        h2[id]:hover .heading-anchor-permalink,
+        h3[id]:hover .heading-anchor-permalink,
+        h4[id]:hover .heading-anchor-permalink,
+        h5[id]:hover .heading-anchor-permalink,
+        h6[id]:hover .heading-anchor-permalink {
+            opacity: 0.5;
+        }
+    </style>
+    <!-- <link href="https://unpkg.com/primer/build/build.css" rel="stylesheet" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        <nav id="menu">
+            <img src="https://asset.naker.io/image/main/logo.png" alt="alt text">
+            <ul>
+<li><a class="" href="..\index.html">index</a></li>
+<li class="heading"><span>Back</span></li>
+<ul>
+<li><a class="" href="..\Back\Classic.html">Classic</a></li>
+<li><a class="" href="..\Back\Framework.html">Framework</a></li>
+</ul>
+<li class="heading"><span>Form</span></li>
+<ul>
+<li><a class="active" href="Form.html">Form</a></li>
+</ul>
+<li><a class="" href="..\Intale.html">Intale</a></li>
+<li><a class="" href="..\Pearl.html">Pearl</a></li>
+</ul>
+        </nav>
+        <article id="main" class="content">
+            <h1 id="naker-form-use-case">Naker Form Use Case <a class="heading-anchor-permalink" href="#naker-form-use-case">#</a></h1>
+<h4 id="one-great-way-to-play-with-the-naker-api-is-to-link-it-with-a-form-as-you-can-see-on-the-naker-login-page">One great way to play with the Naker API is to link it with a form as you can see on the <a href="https://app.naker.io/login">Naker login page</a> <a class="heading-anchor-permalink" href="#one-great-way-to-play-with-the-naker-api-is-to-link-it-with-a-form-as-you-can-see-on-the-naker-login-page">#</a></h4>
+<h2 id="how-to-do-that%3F">How to do that? <a class="heading-anchor-permalink" href="#how-to-do-that%3F">#</a></h2>
+<p>First you need to follow the Intale documentation in order to create a Intale next to your form. As you can see in this documentation you can add a callback and get the Intale object which contains all your scene assets like so:</p>
+<pre><code class="language-javascript">nakerintale.render({
+  container: document.getElementById('container'),
+  project: 'your-project-id',
+}, (intale) =&gt; {
+  // Intale loaded, now you can play with the Intale object!
+});
+</code></pre>
+<p>The Intal object contains a lot of properties as you can see in our api documentation <a href="../api/classes/intale.html"><strong>Intale Class</strong></a>. We will focus on two things: contentsManager and navigation.</p>
+<h2 id="contentsmanager">contentsManager <a class="heading-anchor-permalink" href="#contentsmanager">#</a></h2>
+<h3 id="physical-changes">Physical changes <a class="heading-anchor-permalink" href="#physical-changes">#</a></h3>
+<p>The contentsManager is the class dealing with all your object in the Intale (image, model, cube, light, etc). This is where you can get any of those content in order to play with it and especially in our link a form’s input with a content change.<br>
+First to get a content from your Intale you can use the tag setted in our editor like that:</p>
+<pre><code class="language-javascript">let myContent = contentsManager.getContentByTag('tag_of_your_content');
+</code></pre>
+<p>To have the detail of a content you can check it in our api documentation <a href="../api/classes/content.html"><strong>Content Class</strong></a>. This is the shared Class of all contents but you can also find every specific content detail following those links:</p>
+<ul>
+<li><a href="../api/classes/lightcontent.html">Light Content</a></li>
+<li><a href="../api/classes/modelcontent.html">Model Content</a></li>
+<li><a href="../api/classes/shapecontent.html">Shape Content</a></li>
+<li><a href="../api/classes/imagecontent.html">Image Content</a></li>
+<li><a href="../api/classes/videocontent.html">Video Content</a></li>
+<li><a href="../api/classes/heightmapcontent.html">Heightmap Content</a></li>
+</ul>
+<h4 id="example">Example <a class="heading-anchor-permalink" href="#example">#</a></h4>
+<p>Here is what you could do for instance to make an Intale react to a form input:</p>
+<pre><code class="language-javascript">nakerintale.render({
+  container: document.getElementById('container'),
+  project: 'your-project-id',
+}, (intale) =&gt; {
+  // Get the light of the Intale
+  let light = intale.contentsManager.getContentByTag('light');
+  // Get the form input
+  let textinput = window.getElementById('text-input');
+  // When input is changed, adjust the light of the Intale
+  textinput.oninput = () =&gt; {
+    light.setIntensity(10);
+  }
+});
+</code></pre>
+<p>Following the documentation you will be able to play with any object in the 3D world.</p>
+<h3 id="animation">Animation <a class="heading-anchor-permalink" href="#animation">#</a></h3>
+<p>To go further, you can also choose to animate a content after a user action. As in the editor you can put animation on any content, they all shared another class which is  <a href="../api/classes/animationcontent.html"><strong>Content Move Class</strong></a><br>
+As you can see in there, the contentMove class has the playAnimation function which will launch all the animations of the content. The one animation trigger event which launch it straight forward is the <strong>show</strong>. But show also mean that the nimation will start once the Intale is loaded so in order to avoid that, we will first need to stop it.</p>
+<h4 id="example-2">Example <a class="heading-anchor-permalink" href="#example-2">#</a></h4>
+<pre><code class="language-javascript">nakerintale.render({
+  container: document.getElementById('container'),
+  project: 'your-project-id',
+}, (intale) =&gt; {
+  // Get the light of the Intale
+  let animatedContent = intale.contentsManager.getContentByTag('animated-content');
+  animatedContent.pauseAnimation();
+  // Get the form button
+  let button = window.getElementById('button-input');
+  // When button is clicked, launch the animation
+  button.onclick = () =&gt; {
+    animatedContent.playAnimation();
+  }
+});
+</code></pre>
+<p>This is how you can alter your object Intale and laucnh animation using inputs from a form.</p>
+<h2 id="navigation">navigation <a class="heading-anchor-permalink" href="#navigation">#</a></h2>
+<p>Another great interaction you can have between a form and a Naker’s Intale is with <a href="../api/classes/navigation.html"><strong>navigation Class</strong></a>. navigation is managing the journey of the user in an Intale. That class is responsible to launch the animation to go from one point of vue to an other. And that animation can be targeted (this is what we do when you validate the login page of Naker). That way if you have specified different point of view position/rotation/postprocess, you can animate all of that in just one function call.<br>
+In the documentation page you can see the <strong>moveToPointofView</strong> method. That method simply take the name of your point of view as argument and it will make the what is needed to go to a specific point of view.</p>
+<h4 id="example-3">Example <a class="heading-anchor-permalink" href="#example-3">#</a></h4>
+<pre><code class="language-javascript">nakerintale.render({
+  container: document.getElementById('container'),
+  project: 'your-project-id',
+}, (intale) =&gt; {
+  // Get the form button
+  let button = window.getElementById('button-input');
+  // When button is clicked, launch the animation
+  button.onclick = () =&gt; {
+    // Insert the number of the point of view to be reached,
+    // 0 is for the first Intale's point of view
+    intale.navigation.moveToPointofView('pointofviewname');
+  }
+});
+</code></pre>
+
+        </article>
+    </div>
+    <script>
+      // Load contents.json if you need it
+    </script>
+    <script>
+        // FROM http://purecss.io/js/ui.js
+        (function (window, document) {
+            var layout = document.getElementById("layout"),
+                menu = document.getElementById("menu"),
+                menuLink = document.getElementById("menuLink");
+            function toggleClass(element, className) {
+                var classes = element.className.split(/\s+/),
+                    length = classes.length,
+                    i = 0;
+                for (; i < length; i++) {
+                    if (classes[i] === className) {
+                        classes.splice(i, 1);
+                        break;
+                    }
+                }
+                // The className is not found
+                if (length === classes.length) {
+                    classes.push(className);
+                }
+                element.className = classes.join(" ");
+            }
+            menuLink.onclick = function (e) {
+                var active = "active";
+                e.preventDefault();
+                toggleClass(layout, active);
+                toggleClass(menu, active);
+                toggleClass(menuLink, active);
+            };
+        })(this, this.document);
+    </script>
+
+    <script>
+        (function () {
+            var codeTags = document.querySelectorAll('code[class^="language-"]');
+            for (var tag of codeTags) {
+                tag.className = tag.className.replace("language-", "prettyprint lang-");
+            }
+        })();
+    </script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

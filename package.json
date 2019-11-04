@@ -1,0 +1,15 @@
+{
+    "name": "naker-doc",
+    "description": "Naker Documentation",
+    "repository": "https://github.com/nakerwave/naker-doc.git",
+    "license": "UNLICENSED",
+    "scripts": {
+        "api": "typedoc --out doc/api/ src/viewer",
+        "howto-test": "markdown-folder-to-html-output src/HowToMarkdown src/howto",
+        "howto": "markdown-folder-to-html src/HowToMarkdown"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "markdown-folder-to-html": ""
+    }
+}
