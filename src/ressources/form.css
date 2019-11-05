@@ -1,0 +1,50 @@
+
+
+form {
+    padding: 20px 40px;
+    position: relative;
+    width: 250px;
+    height: auto;
+    background: rgba(0, 0, 0, .5)
+}
+
+form input {
+    position: relative !important;
+    margin-top: 10px;
+    color: #f0f0fb;
+    background: #2c2c3b;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #2c2c3b;
+    padding-left: 5px;
+    right: 0 !important
+}
+
+form input:focus,
+form select:focus {
+    background: #2c2c3b !important;
+    outline: 0;
+    border: 1px solid #0c6
+}
+
+form .form-group {
+    margin: 0 0 10px !important
+}
+
+form .btn {
+    background: #0c2301;
+    color: #f0f0fb;
+    margin-top: 10px;
+    outline: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease
+}
+
+form .btn:hover,
+form .btn[active=true] {
+    background: #0c6
+}
