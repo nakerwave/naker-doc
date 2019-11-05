@@ -10,6 +10,8 @@
     },
     "dependencies": {},
     "devDependencies": {
-        "markdown-folder-to-html": ""
+        "markdown-folder-to-html": "",
+        "typedoc": "^0.14.2",
+        "typedoc-twilio-theme": "^1.0.0"
     }
 }

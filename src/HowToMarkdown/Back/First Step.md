@@ -6,7 +6,7 @@
 Import the Javascript Back Viewer in the header of your website :
 
 ```html
-<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.2/viewer.js' ></script>
+<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.3/viewer.js' ></script>
 ```
 
 This line will import the `nakerback` global variable to your website.
@@ -41,6 +41,7 @@ Type rgbArray:[r, g, b] and Vector3:{x:_number_, y:_number_, z:_number_}
 | sizeStart      | _number_        | Size of particle when it appears               |
 | sizeEnd        | _number_        | Size of particle when it desappears            |
 | life           | _number_        | Size of particle when it desappears            |
+| power          | _number_        | Movement power of particle when it appears     |
 | direction1     | _Vector3_       | Direction of the particle when it appears      |
 | direction2     | _Vector3_       | Second direction of the particle when it appears |
 
@@ -58,28 +59,29 @@ At the end your render function will work like this:
 ```javascript
 nakerback.render({
     container: document.getElementById('container'),
-    particle:{
-        direction1:{x:0,y:0,z:0},
-        direction2:{x:0,y:0,z:0},
-        life:0,
-        texture:"https://d2uret4ukwmuoe.cloudfront.net/particle/sparks.png",
-        number:819,
-        colorStart:[255,255,255,1],
-        colorEnd:[255,255,255,1],
-        sizeStart:0.18,
-        sizeEnd:0.36,
-        delay:0
+    particle: {
+        direction1: {x:0,y:0,z:0},
+        direction2: {x:0,y:0,z:0},
+        life: 5.3,
+        power: 0.5,
+        texture: "https://res.cloudinary.com/naker-io/image/upload/v1566560053/circle_02.png",
+        number: 0,
+        colorStart: [89,173,220,0.63],
+        colorEnd: [198,199,230,0.87],
+        sizeStart: 2,
+        sizeEnd: 4
     },
-    environment:{
-        sensitivity:0.96,
-        colorStart:[0,0,0,1],
-        colorEnd:[234,0,255,1],
+    environment: {
+        sensitivity: 0.96,
+        colorStart: [0,0,0,1],
+        colorEnd: [234,0,255,1],
         gradient: 'vertical'
     }
 });
 ```
 
 Note that the container object will need to have a position style defined, as we use absolute position of the canvas which draw the back, without a position on the container the canvas could go outside.
+And if you want something to be shown in front of the 3D background, you might also need to add a z-index on it.
 
 Plus if you need specific options, we are open to it. Send us an email to support@naker.io
 
