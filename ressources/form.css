@@ -32,7 +32,7 @@ form .form-group {
     margin: 0 0 10px !important
 }
 
-form .btn {
+form button {
     background: #0c2301;
     color: #f0f0fb;
     margin-top: 10px;
@@ -44,7 +44,7 @@ form .btn {
     transition: all .2s ease
 }
 
-form .btn:hover,
-form .btn[active=true] {
+form button:hover,
+form button[active=true] {
     background: #0c6
 }
