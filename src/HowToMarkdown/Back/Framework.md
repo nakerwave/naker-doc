@@ -66,6 +66,8 @@ export class AppComponent implements OnInit  {
 }  
 ```
 
+Note: As angular is using typescript, you could need to add "// @ts-ignore" before window.nakerback.render so that the compilator works correctly.
+
 ### React 
 Put nakerback.render in componentDidMount function:
 

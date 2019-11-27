@@ -1,4 +1,4 @@
-# Naker Intale Viewer
+# Naker Story Viewer
 #### A standalone library to easily add naker intales anywhere online
 
 ## Getting Started
@@ -6,7 +6,7 @@
 Import the Javascript Intale Viewer in the header of your website (current last version v1.0.2) :
 
 ```html
-<script src="https://harbor.naker.io/intale/v1.0.2/viewer.js"></script>
+<script src="https://d23jutsnau9x47.cloudfront.net/story/v1.0.2/viewer.js"></script>
 ```
 
 This line will import the `nakerintale` global variable to your website.

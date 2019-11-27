@@ -1,4 +1,4 @@
-# Naker Form Use Case
+# Form Use Case
 #### One great way to play with the Naker API is to link it with a form as you can see on the [Naker login page](https://app.naker.io/login)  
 
 ## How to do that?
