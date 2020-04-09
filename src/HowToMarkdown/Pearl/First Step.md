@@ -3,10 +3,10 @@
 
 ## Getting Started
 
-Import the Javascript Pearl Viewer in the header of your website (current last version v1.0.1) :
+Import the Javascript Pearl Viewer in the header of your website :
 
 ```html
-<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/pearl/v1.0.2/viewer.js' ></script>
+<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/pearl/v1.0.4/viewer.js' ></script>
 ```
 
 This line will import the `nakerpearl` global variable to your website.

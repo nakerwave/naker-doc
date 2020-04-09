@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-Import the Javascript Intale Viewer in the header of your website (current last version v1.0.2) :
+Import the Javascript Intale Viewer in the header of your website :
 
 ```html
 <script src="https://d23jutsnau9x47.cloudfront.net/story/v1.0.7/viewer.js"></script>
