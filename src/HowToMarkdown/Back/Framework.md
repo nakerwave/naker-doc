@@ -6,14 +6,14 @@ When using a framework we have to set the background using the Naker.Back api.
 First if you don't have access to your head tag, you will have to load nakerback script asynchronously. This is how to do it:
 ```javascript
 const script = document.createElement("script");
-script.src = "https://d23jutsnau9x47.cloudfront.net/back/v1.0.3/viewer.js";
+script.src = "https://d23jutsnau9x47.cloudfront.net/back/v1.0.9/viewer.js";
 script.async = true;
 document.body.appendChild(script);
 ```
 
 Reminder, if you do have access to your head tag you can just put in it:
 ```javascript
-<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.3/viewer.js' ></script>
+<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.9/viewer.js' ></script>
 ```
 
 Then using the api you must call the render function to build the back exactly as explain in the [Classic](./Back/Classic.html) documentation. 

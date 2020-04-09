@@ -6,7 +6,7 @@
 Import the Javascript Back Viewer in the header of your website :
 
 ```html
-<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.3/viewer.js' ></script>
+<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/back/v1.0.9/viewer.js' ></script>
 ```
 
 This line will import the `nakerback` global variable to your website.

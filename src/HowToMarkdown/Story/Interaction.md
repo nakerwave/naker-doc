@@ -6,7 +6,7 @@
 First you need to follow the Intale documentation in order to create a Intale next to your form. As you can see in this documentation you can add a callback and get the Intale object which contains all your scene assets like so:
 
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 }, (intale) => {
@@ -36,7 +36,7 @@ To have the detail of a content you can check it in our api documentation [**Con
 #### Example
 Here is what you could do for instance to make an Intale react to a form input:
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 }, (intale) => {
@@ -57,7 +57,7 @@ To go further, you can also choose to animate a content after a user action. As 
 As you can see in there, the contentMove class has the playAnimation function which will launch all the animations of the content. The one animation trigger event which launch it straight forward is the **show**. But show also mean that the nimation will start once the Intale is loaded so in order to avoid that, we will first need to stop it.
 #### Example
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 }, (intale) => {
@@ -81,7 +81,7 @@ In the documentation page you can see the **moveToPointofView** method. That met
 
 #### Example
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 }, (intale) => {

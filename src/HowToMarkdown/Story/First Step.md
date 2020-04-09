@@ -6,10 +6,10 @@
 Import the Javascript Intale Viewer in the header of your website (current last version v1.0.2) :
 
 ```html
-<script src="https://d23jutsnau9x47.cloudfront.net/story/v1.0.2/viewer.js"></script>
+<script src="https://d23jutsnau9x47.cloudfront.net/story/v1.0.7/viewer.js"></script>
 ```
 
-This line will import the `nakerintale` global variable to your website.
+This line will import the `nakerstory` global variable to your website.
 
 ## Usage
 
@@ -21,7 +21,7 @@ var container = document.getElementById('container');
 Use the render function of the viewer and your `project id` in order to automatically create your scene like so :
 
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 });
@@ -37,7 +37,7 @@ You can also add some options to the render function. Here is the list of the av
 | loadervisible  | _boolean_    | `true`       | Choose if text loader is visible                                      |
 
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
   loadervisible: false,
@@ -51,7 +51,7 @@ If you need a specific option for your project, we are open to it. Juste create 
 It is possible to add a callback as a second argument of the render function, this function will be called when the intale is completly loaded. The callback returns the intale object with all its parameters :
 
 ```javascript
-nakerintale.render({
+nakerstory.render({
   container: document.getElementById('container'),
   project: 'your-project-id',
 }, (intale) => {

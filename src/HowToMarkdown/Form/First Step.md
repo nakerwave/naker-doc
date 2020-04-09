@@ -6,7 +6,7 @@
 Import the Javascript Form Viewer in the header of your website :
 
 ```html
-<script data-who='💎 Made with naker.io 💎' src='https://harbor.naker.io/form/viewer.js' ></script>
+<script data-who='💎 Made with naker.io 💎' src='https://d23jutsnau9x47.cloudfront.net/form/v1.0.3/viewer.js' ></script>
 ```
 
 This line will import the `nakerform` global variable to your website.
